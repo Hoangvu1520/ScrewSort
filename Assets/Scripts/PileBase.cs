@@ -175,7 +175,6 @@ public class PileBase : SerializedMonoBehaviour
             Scew.gameObject.name = idScew[i].ToString();
             stackScrew.Push(Scew);
             GameplayController.Instance.playerContain.sumScewCurrent += 1;
-            Debug.LogError(stackScrew.Count);
         }
         if (
     GameplayController.Instance.tutLevel_1.tutorials[0].IsCanShowTut())

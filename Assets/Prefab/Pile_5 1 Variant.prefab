@@ -145,7 +145,7 @@ MonoBehaviour:
   id: 0
   pileData:
     type: 0
-    numSlot: 0
+    numSlot: 4
   firstPost: {fileID: 4561722266122016990}
   lsPost:
   - {fileID: 3948115406828648068}
