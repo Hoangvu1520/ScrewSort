@@ -71,7 +71,7 @@ public class ScrewBase : MonoBehaviour
     public void Scale(float time, Action callBack)
     {
 
-        this.transform.DOScale(new Vector3(1, 1, 1), time).OnComplete(delegate {  ShowAnim(ROTATE_LEFT); callBack?.Invoke(); });
+        this.transform.DOScale(new Vector3(1, 1, 1), time).OnComplete(delegate {  callBack?.Invoke(); });
 
     }
 

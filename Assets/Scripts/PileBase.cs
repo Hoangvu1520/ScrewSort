@@ -206,7 +206,6 @@ public class PileBase : SerializedMonoBehaviour
             }
             scewOnArray[index].Scale(time, delegate
             {
-                Debug.LogError(index);
                 scewOnArray[index].transform.parent = lsPost[index];
                 scewOnArray[index].LocalMove(0.5f, delegate { GameplayController.Instance.playerContain.CheckScewWasInit(); });
 
