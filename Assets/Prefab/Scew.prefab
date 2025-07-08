@@ -147,7 +147,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 63db9d628f2c4b14e93464ac24bda414, type: 2}
   - {fileID: 2100000, guid: bf1c98e21ac0e1b42af1bd6671deff3d, type: 2}
   - {fileID: 2100000, guid: 4af5c54423d298346b37211dfc42c5e3, type: 2}
-  animation: {fileID: 0}
+  animation: {fileID: 3442343967930779279}
   vfxScew: {fileID: 0}
   isMoving: 0
   extrals: []
