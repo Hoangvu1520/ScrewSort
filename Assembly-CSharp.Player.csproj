@@ -62,10 +62,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\DOTween_1_2_765\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\Scripts\UI\Loading\StartLoading.cs" />
     <Compile Include="Assets\DOTween_1_2_765\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
+    <Compile Include="Assets\Scripts\UI\Loading\Initiate.cs" />
     <Compile Include="Assets\Scripts\PileBase.cs" />
     <Compile Include="Assets\Scripts\Utility\StringHelper.cs" />
     <Compile Include="Assets\Singleton.cs" />
+    <Compile Include="Assets\Scripts\UI\Loading\Fader.cs" />
     <Compile Include="Assets\Scripts\ScrewBase.cs" />
     <Compile Include="Assets\Scripts\Tutorials\TutorialFunController.cs" />
     <Compile Include="Assets\Scripts\UserProfile.cs" />

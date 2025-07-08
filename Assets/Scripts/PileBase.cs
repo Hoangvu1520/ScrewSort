@@ -1,6 +1,8 @@
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -188,9 +190,9 @@ public class PileBase : SerializedMonoBehaviour
             lsPost[2] = temp1;
             lsPost[3] = temp2;
         }
+
         for (int i = 0; i < scewOnArray.Length; i++)
         {
-
             int index = i;
             float time = 0;
             if (index > 0)
@@ -204,6 +206,7 @@ public class PileBase : SerializedMonoBehaviour
             }
             scewOnArray[index].Scale(time, delegate
             {
+                Debug.LogError(index);
                 scewOnArray[index].transform.parent = lsPost[index];
                 scewOnArray[index].LocalMove(0.5f, delegate { GameplayController.Instance.playerContain.CheckScewWasInit(); });
 
