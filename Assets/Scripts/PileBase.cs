@@ -406,17 +406,17 @@ public class PileBase : SerializedMonoBehaviour
 
 
 
-                if (numScewEnd_this > 0) // n?u pilethis ?ang có scew
+                if (numScewEnd_this > 0) // neu pile this dang co screw
                 {
 
-                    if (numScewEnd_currentStand > 0) // n?u currentPile ?ang có scew mang theo
+                    if (numScewEnd_currentStand > 0) // neu current pile dang co screw mang theo
                     {
-                        if (pileData.numSlot > stackScrew.Count) // n?u còn ch? ch?a 
+                        if (pileData.numSlot > stackScrew.Count) // neu con cho chua
                         {
-                            if (ScewEnd_this[0].id == ScewEnd_currentPile[0].id) // n?u 2 scew c?a 2 pile gi?ng nhau
+                            if (ScewEnd_this[0].id == ScewEnd_currentPile[0].id) // neu 2 screw dau cua 2 pile giong nhau
                             {
 
-                                int numSlotLeft = pileData.numSlot - stackScrew.Count; // s? l??ng scew có th? l?p
+                                int numSlotLeft = pileData.numSlot - stackScrew.Count; // so luong screw co the lap
                                 int numScewMove = 0;
                                 if (numScewEnd_currentStand >= numSlotLeft)
                                 {
@@ -427,7 +427,7 @@ public class PileBase : SerializedMonoBehaviour
                                     numScewMove = numScewEnd_currentStand;
                                 }
 
-                                // vi?t return vào ?ây
+                                // viet return vao day
                                 DataReturn dataReturn = new DataReturn();
                                 List<ScrewBase> scewMove = new List<ScrewBase>();
                                 for (int i = 0; i < numScewMove; i++)
@@ -507,7 +507,7 @@ public class PileBase : SerializedMonoBehaviour
                         }
                         else
                         {
-                            Debug.LogError("khongconchochua");
+                            //ko co cho chua
                             GameplayController.Instance.playerContain.HandleCallAllSort();
                             HandleErrorSort();
                             yield return null;
@@ -515,7 +515,6 @@ public class PileBase : SerializedMonoBehaviour
                     }
                     else
                     {
-                        Debug.LogError("gidaykhonghieu");
                         GameplayController.Instance.playerContain.HandleCallAllSort();
                         HandleErrorSort();
                         yield return null;
@@ -527,7 +526,6 @@ public class PileBase : SerializedMonoBehaviour
 
                     if (this.stackScrew.Count > 0)
                     {
-                        Debug.LogError("co scew");
                         List<ScrewBase> scews_c = pileBase.GetScewSameEnd();
                         List<ScrewBase> scews_t = this.GetScewSameEnd();
                         bool isCanChangePile = false;
@@ -589,7 +587,6 @@ public class PileBase : SerializedMonoBehaviour
                                                         //HandleCheckExtral();
                                                         scewMove[index].vfxScew.Play();
                                                         scewMove[index].isMoving = false;
-                                                        //Debug.LogError("EndMove");
 
                                                     });
                                                 });
@@ -616,7 +613,7 @@ public class PileBase : SerializedMonoBehaviour
                                     }
 
                                 }
-                                else // ko ?? ch? ch?a
+                                else // ko co cho chua
                                 {
                                     DataReturn dataReturn = new DataReturn();
                                     List<ScrewBase> scewMove = new List<ScrewBase>();
@@ -659,7 +656,6 @@ public class PileBase : SerializedMonoBehaviour
                                                         //HandleCheckExtral();
                                                         scewMove[index].vfxScew.Play();
                                                         scewMove[index].isMoving = false;
-                                                        //      Debug.LogError("EndMove");
                                                     });
                                                 });
                                             });
@@ -693,7 +689,6 @@ public class PileBase : SerializedMonoBehaviour
                         }
                         else
                         {
-                            Debug.LogError("gidaykhonghieu");
                             HandleErrorSort();
                             yield return null;
                         }
@@ -846,7 +841,6 @@ public class PileBase : SerializedMonoBehaviour
                         }
                         else
                         {
-                            Debug.LogError("gidaykhonghieu");
                             HandleErrorSort();
 
                         }

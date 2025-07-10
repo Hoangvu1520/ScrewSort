@@ -292,7 +292,7 @@ public class PlayerContain : MonoBehaviour
 
         }
 
-        //Debug.LogError("checkWin " + checkWin);
+        
     }
 
     //private IEnumerator ShowPopupWin()
