@@ -1,8 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class WinBox : BoxBase
 {
@@ -13,6 +17,21 @@ public class WinBox : BoxBase
     public List<string> contentList;
     public Text tvContent;
     public List<GameObject> onOffIcon;
+    #region instance
+
+    private static WinBox instance;
+    public static WinBox Setup(bool isSaveBox = false, Action actionOpenBoxSave = null)
+    {
+        if (instance == null)
+        {
+            //instance = Instantiate(Resources.Load<WinBox>(PathPrefabs.WIN_BOX));
+            instance.Init();
+        }
+
+        instance.InitState();
+        return instance;
+    }
+    #endregion
 
     private void Init()
     {

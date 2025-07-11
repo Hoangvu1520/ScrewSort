@@ -295,13 +295,13 @@ public class PlayerContain : MonoBehaviour
         
     }
 
-    //private IEnumerator ShowPopupWin()
-    //{
-    //    yield return new WaitForSeconds(2);
+    private IEnumerator ShowPopupWin()
+    {
+        yield return new WaitForSeconds(2);
 
-    //    Winbox.Setup().Show();
+        Winbox.Setup().Show();
 
-    //}
+    }
 
     public void HandleShowTutXV(bool onOff)
     {
