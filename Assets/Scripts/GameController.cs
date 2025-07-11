@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static GameController Instance;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //public MoneyEffectController moneyEffectController;
+    public UserProfile useProfile;
+    //public DataContain dataContain;
+    //public MusicManagerGameBase musicManager;
+    //public AdmobAds admobAds;
+
+    //public AnalyticsController AnalyticsController;
+    //public IapController iapController;
+    //[HideInInspector] public SceneType currentScene;
+
+    public StartLoading startLoading;
 }

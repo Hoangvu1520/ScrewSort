@@ -299,7 +299,7 @@ public class PlayerContain : MonoBehaviour
     //{
     //    yield return new WaitForSeconds(2);
 
-    //    //Winbox.Setup().Show();
+    //    Winbox.Setup().Show();
 
     //}
 

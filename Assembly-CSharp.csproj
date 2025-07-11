@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\UI\Loading\StartLoading.cs" />
     <Compile Include="Assets\Scripts\UI\BoxBase.cs" />
     <Compile Include="Assets\DOTween_1_2_765\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
+    <Compile Include="Assets\Scripts\UI\WinBox.cs" />
     <Compile Include="Assets\Scripts\UI\Loading\Initiate.cs" />
     <Compile Include="Assets\Scripts\UI\BoxController.cs" />
     <Compile Include="Assets\Scripts\PileBase.cs" />
