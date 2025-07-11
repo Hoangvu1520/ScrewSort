@@ -72,9 +72,9 @@ public class WinBox : BoxBase
             return;
         }
         UserProfile.CurrentLevel += 1;
-        //    SceneManager.LoadScene("GamePlay");
+            SceneManager.LoadScene("GamePlay");
 
-    }
+        }
 
 
 }

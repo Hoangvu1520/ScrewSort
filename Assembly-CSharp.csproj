@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\GameScene.cs" />
     <Compile Include="Assets\Scripts\Tutorials\Tutorial_Level_1.cs" />
     <Compile Include="Assets\Scripts\Tutorials\Tutotial_Level_1_Step_2.cs" />
+    <Compile Include="Assets\Scripts\UI\SettingBox.cs" />
     <Compile Include="Assets\Scripts\CameraScale.cs" />
     <Compile Include="Assets\Scripts\PlayerContain.cs" />
     <Compile Include="Assets\Scripts\ExtralPlayController.cs" />
@@ -96,10 +97,12 @@
     <Compile Include="Assets\DOTween_1_2_765\DOTween\Modules\DOTweenModulePhysics2D.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Resources\LevelTest\Level_2.txt" />
     <None Include="Assets\Resources\LevelTest\Level_46.txt" />
     <None Include="Assets\Resources\LevelTest\Level_93.txt" />
     <None Include="Assets\Resources\LevelTest\Level_34.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Resources\LevelTest\Level_26.txt" />
     <None Include="Assets\Resources\LevelTest\Level_78.txt" />
     <None Include="Assets\Resources\LevelTest\Level_39.txt" />
@@ -109,6 +112,7 @@
     <None Include="Assets\Resources\LevelTest\Level_14.txt" />
     <None Include="Assets\Resources\LevelTest\Level_18.txt" />
     <None Include="Assets\Resources\LevelTest\Level_42.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Resources\LevelTest\Level_70.txt" />
     <None Include="Assets\Resources\LevelTest\Level_44.txt" />
     <None Include="Assets\Resources\LevelTest\Level_9.txt" />
@@ -117,10 +121,12 @@
     <None Include="Assets\Resources\LevelTest\Level_62.txt" />
     <None Include="Assets\Resources\LevelTest\Level_31.txt" />
     <None Include="Assets\DOTween_1_2_765\DOTween\readme.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\Resources\LevelTest\Level_54.txt" />
     <None Include="Assets\Resources\LevelTest\Level_99.txt" />
     <None Include="Assets\Resources\LevelTest\Level_55.txt" />
     <None Include="Assets\Resources\LevelTest\Level_64.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Resources\LevelTest\Level_19.txt" />
     <None Include="Assets\Resources\LevelTest\Level_68.txt" />
     <None Include="Assets\Resources\LevelTest\Level_8.txt" />
@@ -130,6 +136,7 @@
     <None Include="Assets\Resources\LevelTest\Level_35.txt" />
     <None Include="Assets\Resources\LevelTest\Level_74.txt" />
     <None Include="Assets\Resources\LevelTest\Level_89.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Resources\LevelTest\Level_98.txt" />
     <None Include="Assets\Resources\LevelTest\Level_100.txt" />
     <None Include="Assets\Resources\LevelTest\Level_27.txt" />
@@ -150,15 +157,23 @@
     <None Include="Assets\Resources\LevelTest\Level_45.txt" />
     <None Include="Assets\Resources\LevelTest\Level_1.txt" />
     <None Include="Assets\Resources\LevelTest\Level_88.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Resources\LevelTest\Level_82.txt" />
     <None Include="Assets\Resources\LevelTest\Level_21.txt" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Resources\LevelTest\Level_83.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\Resources\LevelTest\Level_23.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Resources\LevelTest\Level_59.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Resources\LevelTest\Level_65.txt" />
     <None Include="Assets\Resources\LevelTest\Level_87.txt" />
     <None Include="Assets\Resources\LevelTest\Level_73.txt" />
     <None Include="Assets\Resources\LevelTest\Level_90.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Resources\LevelTest\Level_97.txt" />
     <None Include="Assets\Resources\LevelTest\Level_77.txt" />
     <None Include="Assets\Resources\LevelTest\Level_94.txt" />
@@ -167,6 +182,7 @@
     <None Include="Assets\Resources\LevelTest\Level_37.txt" />
     <None Include="Assets\Resources\LevelTest\Level_66.txt" />
     <None Include="Assets\Resources\LevelTest\Level_79.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Resources\LevelTest\Level_15.txt" />
     <None Include="Assets\Resources\LevelTest\Level_36.txt" />
     <None Include="Assets\Resources\LevelTest\Level_41.txt" />
@@ -181,23 +197,29 @@
     <None Include="Assets\Resources\LevelTest\Level_40.txt" />
     <None Include="Assets\Resources\LevelTest\Level_92.txt" />
     <None Include="Assets\Resources\LevelTest\Level_13.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Resources\LevelTest\Level_25.txt" />
     <None Include="Assets\Resources\LevelTest\Level_3.txt" />
     <None Include="Assets\Resources\LevelTest\Level_16.txt" />
     <None Include="Assets\Resources\LevelTest\Level_52.txt" />
     <None Include="Assets\Resources\LevelTest\Level_76.txt" />
     <None Include="Assets\Resources\LevelTest\Level_22.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Resources\LevelTest\Level_96.txt" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Resources\LevelTest\Level_56.txt" />
     <None Include="Assets\Resources\LevelTest\Level_81.txt" />
     <None Include="Assets\Resources\LevelTest\Level_48.txt" />
     <None Include="Assets\Resources\LevelTest\Level_86.txt" />
     <None Include="Assets\Resources\LevelTest\Level_32.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Resources\LevelTest\Level_84.txt" />
     <None Include="Assets\Resources\LevelTest\Level_43.txt" />
     <None Include="Assets\Resources\LevelTest\Level_95.txt" />
     <None Include="Assets\Resources\LevelTest\Level_75.txt" />
     <None Include="Assets\Resources\LevelTest\Level_53.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Resources\LevelTest\Level_17.txt" />
   </ItemGroup>
   <ItemGroup>
