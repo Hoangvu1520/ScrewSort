@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class SettingBox : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Init()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void InitState()
     {
-        
+        SetUpBtn();
     }
+
+    private void SetUpBtn()
+    {
+
+    }
+
 }
