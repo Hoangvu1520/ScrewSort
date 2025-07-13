@@ -24,7 +24,7 @@ public class WinBox : BoxBase
     {
         if (instance == null)
         {
-            //instance = Instantiate(Resources.Load<WinBox>(PathPrefabs.WIN_BOX));
+            instance = Instantiate(Resources.Load<WinBox>(PathPrefabs.WIN_BOX));
             instance.Init();
         }
 
@@ -35,7 +35,7 @@ public class WinBox : BoxBase
 
     private void Init()
     {
-        //nextButton.onClick.AddListener(HandleNext);
+        nextButton.onClick.AddListener(HandleNext);
     }
 
     public void InitState()
@@ -98,9 +98,5 @@ public class WinBox : BoxBase
 
 }
 
-    //private void Update()
-    //{
-
-    //    aura.transform.localEulerAngles += new Vector3(0, 0, 1);
-    //}
+    
 }

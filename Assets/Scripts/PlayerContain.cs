@@ -289,7 +289,7 @@ public class PlayerContain : MonoBehaviour
 
         if (checkWin)
         {
-            //StartCoroutine(ShowPopupWin());
+            StartCoroutine(ShowPopupWin());
 
         }
 

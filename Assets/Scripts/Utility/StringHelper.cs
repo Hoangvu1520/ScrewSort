@@ -84,3 +84,47 @@ public class SceneName
     public const string HOME_SCENE = "HomeScene";
     public const string GAME_PLAY = "GamePlay";
 }
+
+public class PathPrefabs
+{
+    public const string POPUP_REWARD_BASE = "UI/Popups/PopupRewardBase";
+    public const string CONFIRM_POPUP = "UI/Popups/ConfirmBox";
+    public const string WAITING_BOX = "UI/Popups/WaitingBox";
+    public const string WIN_BOX = "UI/Popups/WinBox";
+    public const string REWARD_IAP_BOX = "UI/Popups/RewardIAPBox";
+    public const string SHOP_BOX = "UI/ShopBox";
+    public const string RATE_GAME_BOX = "UI/Popups/RateGameBox";
+    public const string SETTING_BOX = "UI/Popups/SettingBox";
+    public const string LOSE_BOX = "UI/Popups/LoseBox";
+    public const string LEVEL_FAILED_BOX = "UI/Popups/LevelFailedBox";
+    public const string EXIT_LEVEL_BOX = "UI/Popups/ExitLevelBox";
+
+    public const string SETTINGS_BOX = "UI/Popups/SettingsBox";
+    public const string FAIL_CONNECTION_BOX = "UI/Popups/FailConnectionBox";
+    public const string SELECT_LEVEL_BOX = "UI/Popups/SelectLevelPopups";
+
+    public const string REWARD_CONGRATULATION_BOX = "UI/Popups/RewardCongratulationBox";
+    public const string SHOP_GAME_BOX = "UI/Popups/ShopBox";
+    public const string CONGRATULATION_BOX = "UI/Popups/CongratulationBox";
+
+    public const string STARTER_PACK_BOX = "UI/Popups/PackBoxes/StarterPackBox";
+    public const string THREE_SKIN_BIRD_PACK_BOX = "UI/Popups/PackBoxes/ThreeSkinBirdPackBox";
+    public const string BRANCH_AND_THEME_PACK_BOX = "UI/Popups/PackBoxes/BranchAndThemePackBox";
+
+
+    public const string BIG_REMOVE_ADS_PACK_BOX = "UI/Popups/PackBoxes/BigRemoveAdsPackBox";
+    public const string SALE_WEEKEND_1_PACK_BOX = "UI/Popups/PackBoxes/SaleWeekend1PackBox";
+    public const string MINI_GAME_CONNECT_BIRD_BOX = "UI/Popups/ConnectBirdMGBox";
+    public const string CONNECT_BIRD_MINI_GAME_SHOP_BOX = "UI/Popups/ConnectBirdMiniGameShop";
+    public const string REWARD_CONNECT_BIRD_MN_BOX = "UI/Popups/RewardConnectBirdMNBox";
+    public const string POPUP_DAILY_REWARD = "UI/Popups/PopupDailyReward";
+    public const string POPUP_PAUSE_BOX = "UI/Popups/PauseBox";
+
+    public const string SUGGET_BOX = "UI/Popups/SuggetBox";
+    public const string OPEN_GIFT_BOX = "UI/Popups/OpenGiftBox";
+    public const string SHOP_PACK_BOX = "UI/Popups/ShopPackBox";
+    public const string LEVEL_GIFT_BOX = "UI/Popups/LevelGiftBox";
+    public const string EGG_GIFT_BOX = "UI/Popups/EggGiftBox";
+    public const string AD_BREAK_BOX = "UI/Popups/AdBreakBox";
+    public const string NOTI_BOX = "UI/Popups/Notification";
+}
