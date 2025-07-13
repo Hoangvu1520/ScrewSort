@@ -98,9 +98,9 @@ public class WinBox : BoxBase
 
 }
 
-    private void Update()
-    {
+    //private void Update()
+    //{
 
-        aura.transform.localEulerAngles += new Vector3(0, 0, 1);
-    }
+    //    aura.transform.localEulerAngles += new Vector3(0, 0, 1);
+    //}
 }

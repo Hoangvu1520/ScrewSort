@@ -1,7 +1,8 @@
-using Sirenix.OdinInspector;
+using System.Collections;
 using System.Collections.Generic;
-using System;
 using UnityEngine;
+using System;
+using Sirenix.OdinInspector;
 
 [System.Serializable]
 public class PossitionType
@@ -299,7 +300,7 @@ public class PlayerContain : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
 
-        Winbox.Setup().Show();
+        WinBox.Setup().Show();
 
     }
 
