@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class StartLoading : MonoBehaviour
 {
-    public Text txtLoading;
+    public TMP_Text txtLoading;
     public Slider progressBar;
     private string sceneName;
     public int countSecond;
@@ -39,7 +40,7 @@ public class StartLoading : MonoBehaviour
         //    sceneName = "HomeScene";
         //}
         // sceneName = "HomeScene";
-        var _asyncOperation = SceneManager.LoadSceneAsync("GamePlay", LoadSceneMode.Single);
+        var _asyncOperation = SceneManager.LoadSceneAsync("Gameplay", LoadSceneMode.Single);
         //_asyncOperation.allowSceneActivation = false;
         //Debug.Log("_asyncOperation " + _asyncOperation.progress);
         //// while the scene loads, we assign its progress to a target that we'll use to fill the progress bar smoothly
