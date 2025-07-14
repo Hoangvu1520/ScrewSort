@@ -16,6 +16,7 @@ public class StartLoading : MonoBehaviour
 
     public void Init()
     {
+        Debug.LogError("loading");
         wasCoolDown = true;
         progressBar.value = 0f;
         countSecond = 0;
