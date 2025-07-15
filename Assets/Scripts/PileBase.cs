@@ -327,7 +327,7 @@ public class PileBase : SerializedMonoBehaviour
         if (currentPile != null)
         {
             //GameplayController.Instance.playerContain.HandleShowTutXV(false);
-            if (currentPile != this) // n?u pile ???c b?m không gi?ng v?i currentpile
+            if (currentPile != this) 
             {
 
                 StartCoroutine(HandleCheckScewChangePile(currentPile));

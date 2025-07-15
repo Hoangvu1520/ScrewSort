@@ -180,7 +180,7 @@ public class PlayerContain : MonoBehaviour
     {
         string pathLevel = StringHelper.PATH_CONFIG_LEVEL;
         pathLevel = StringHelper.PATH_CONFIG_LEVEL_TEST;
-        TextAsset lvJson = Resources.Load<TextAsset>(string.Format(pathLevel, "1")); //thay doi level
+        TextAsset lvJson = Resources.Load<TextAsset>(string.Format(pathLevel, UserProfile.CurrentLevel)); //thay doi level
         levelConfig = JsonUtility.FromJson<LevelConfig>(lvJson.ToString());
         lsPostPileHolds = new List<Transform>();
         foreach (var item in GetPossitionType(levelConfig.standConfig.Count).lsPostPile)

@@ -15,7 +15,7 @@ public class StringHelper : MonoBehaviour
     public const string CURRENT_LEVEL = "CURRENT_LEVEL";
     public const string CURRENT_LEVEL_PLAY = "CURRENT_LEVEL_PLAY";
     public const string PATH_CONFIG_LEVEL = "Levels/Level_";
-    public const string PATH_CONFIG_LEVEL_TEST = "LevelTest/Level_2";
+    public const string PATH_CONFIG_LEVEL_TEST = "LevelTest/Level_{0}";
     public const string PATH_CONFIG_LEVEL_SPECIAL = "SpecialLevel/Level_{0}";
     public const string LEVEL_DEMO_IMAGE_WIN = "Demo/lv";
     public const string LEVEL_DEMO_IMAGE_NOT_WIN = "Demo/bw_lv";

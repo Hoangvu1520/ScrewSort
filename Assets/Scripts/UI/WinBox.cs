@@ -77,7 +77,14 @@ public class WinBox : BoxBase
     public void HandleNext()
     {
         //GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () => { Next(); }, actionWatchLog: "replay");
-        
+        if (UserProfile.CurrentLevel >= 100)
+        {
+            Debug.LogError("next");
+            SceneManager.LoadScene("Gameplay");
+            return;
+        }
+        UserProfile.CurrentLevel += 1;
+        SceneManager.LoadScene("Gameplay");
         void Next()
         {
             //    GameController.Instance.AnalyticsController.WinLevel(UseProfile.CurrentLevel);
@@ -87,7 +94,8 @@ public class WinBox : BoxBase
                 //GamePlayController.Instance.tutLevel_1.EndTut();
             if (UserProfile.CurrentLevel >= 100)
         {
-            SceneManager.LoadScene("Gameplay");
+                Debug.LogError("next");
+                SceneManager.LoadScene("Gameplay");
             return;
         }
         UserProfile.CurrentLevel += 1;
