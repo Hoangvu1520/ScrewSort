@@ -23,17 +23,16 @@ public class Tutotial_Level_1_Step_2 : TutorialBase
 
     public override void StartTut()
     {
-        Debug.LogError("Tutotial_Level_1_Step_2");
         if (GameplayController.Instance.playerContain.currentPile != GameplayController.Instance.playerContain.currentPileInGame[1])
         {
-            GameplayController.Instance.playerContain.currentPileInGame[1].HandleTutLevel1Step2();
-            currentHand = Instantiate(handTut, GameplayController.Instance.playerContain.currentPileInGame[1].transform);
+            //GameplayController.Instance.playerContain.currentPileInGame[1].HandleTutLevel1Step2();
+            //currentHand = Instantiate(handTut, GameplayController.Instance.playerContain.currentPileInGame[1].transform);
 
         }
         else
         {
-            GameplayController.Instance.playerContain.currentPileInGame[0].HandleTutLevel1Step2();
-            currentHand = Instantiate(handTut, GameplayController.Instance.playerContain.currentPileInGame[0].transform);
+            //GameplayController.Instance.playerContain.currentPileInGame[0].HandleTutLevel1Step2();
+            //currentHand = Instantiate(handTut, GameplayController.Instance.playerContain.currentPileInGame[0].transform);
 
         }
         tutPile = GameplayController.Instance.playerContain.currentPile;

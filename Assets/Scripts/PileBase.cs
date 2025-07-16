@@ -149,21 +149,21 @@ public class PileBase : SerializedMonoBehaviour
         }
         return result;
     }
-    public bool CanTouchMove
-    {
-        get
-        {
-            foreach (var item in scewOnArray)
-            {
-                if (item.isMoving == true)
-                {
-                    return false;
-                }
-            }
+    //public bool CanTouchMove
+    //{
+    //    get
+    //    {
+    //        foreach (var item in scewOnArray)
+    //        {
+    //            if (item.isMoving == true)
+    //            {
+    //                return false;
+    //            }
+    //        }
 
-            return true;
-        }
-    }
+    //        return true;
+    //    }
+    //}
     public IEnumerator Init(List<int> idScew)
     {
         stackScrew = new Stack<ScrewBase>();
@@ -178,18 +178,18 @@ public class PileBase : SerializedMonoBehaviour
             stackScrew.Push(Scew);
             GameplayController.Instance.playerContain.sumScewCurrent += 1;
         }
-        if (
-    GameplayController.Instance.tutLevel_1.tutorials[0].IsCanShowTut())
-        {
-            var temp1 = lsPost[0];
-            var temp2 = lsPost[1];
-            var temp3 = lsPost[2];
-            var temp4 = lsPost[3];
-            lsPost[0] = temp3;
-            lsPost[1] = temp4;
-            lsPost[2] = temp1;
-            lsPost[3] = temp2;
-        }
+    //    if (
+    //GameplayController.Instance.tutLevel_1.tutorials[0].IsCanShowTut())
+    //    {
+    //        //var temp1 = lsPost[0];
+    //        //var temp2 = lsPost[1];
+    //        //var temp3 = lsPost[2];
+    //        //var temp4 = lsPost[3];
+    //        //lsPost[0] = temp3;
+    //        //lsPost[1] = temp4;
+    //        //lsPost[2] = temp1;
+    //        //lsPost[3] = temp2;
+    //    }
 
         for (int i = 0; i < scewOnArray.Length; i++)
         {
@@ -314,10 +314,10 @@ public class PileBase : SerializedMonoBehaviour
         {
             return;
         }
-        if (!CanTouchMove)
-        {
-            return;
-        }
+        //if (!CanTouchMove)
+        //{
+        //    return;
+        //}
         if (IsCompleted)
         {
             return;
@@ -869,8 +869,8 @@ public class PileBase : SerializedMonoBehaviour
         {
             if (pileData.numSlot == stackScrew.Count)
             {
-                spriteRender.color = new Color32(255, 255, 255, 255);
-                spriteRender.sprite = fullIcon;
+                //spriteRender.color = new Color32(255, 255, 255, 255);
+                //spriteRender.sprite = fullIcon;
             }
             if (pileData.numSlot > stackScrew.Count)
             {
@@ -882,19 +882,19 @@ public class PileBase : SerializedMonoBehaviour
                 List<ScrewBase> ScewEnd_this = this.GetScewSameEnd(isGetLockMove: false);
                 if (ScewEnd_this.Count == 0)
                 {
-                    spriteRender.color = new Color32(255, 255, 255, 255);
-                    spriteRender.sprite = vIcon;
+                    //spriteRender.color = new Color32(255, 255, 255, 255);
+                    //spriteRender.sprite = vIcon;
                     return;
                 }
                 if (ScewEnd_this[0].id == ScewEnd_currentPile[0].id)
                 {
-                    spriteRender.color = new Color32(255, 255, 255, 255);
-                    spriteRender.sprite = vIcon;
+                    //spriteRender.color = new Color32(255, 255, 255, 255);
+                    //spriteRender.sprite = vIcon;
                 }
                 else
                 {
-                    spriteRender.color = new Color32(255, 255, 255, 255);
-                    spriteRender.sprite = xIcon;
+                    //spriteRender.color = new Color32(255, 255, 255, 255);
+                    //spriteRender.sprite = xIcon;
                 }
 
 
@@ -902,7 +902,7 @@ public class PileBase : SerializedMonoBehaviour
         }
         else
         {
-            spriteRender.color = new Color32(0, 0, 0, 0);
+            //spriteRender.color = new Color32(0, 0, 0, 0);
         }
 
 

@@ -545,7 +545,10 @@ MonoBehaviour:
   nextButton: {fileID: 6402703478408751790}
   aura: {fileID: 0}
   emojiIcon: {fileID: 0}
-  spritesList: []
+  spritesList:
+  - {fileID: 21300000, guid: 74beef43013f3d848a091fa1165bba33, type: 3}
+  - {fileID: 21300000, guid: 25a79f99568c13744bfd186959cf8bbf, type: 3}
+  - {fileID: 21300000, guid: 284136e37d1e47949900af6ff3b46ad6, type: 3}
   contentList:
   - Congratulation
   tvContent: {fileID: 0}

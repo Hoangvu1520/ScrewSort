@@ -248,6 +248,7 @@ public class PlayerContain : MonoBehaviour
     public float countDownTap;
     public void Update()
     {
+        
         if (wasTouchPile)
         {
             countDownTap += Time.unscaledDeltaTime;
