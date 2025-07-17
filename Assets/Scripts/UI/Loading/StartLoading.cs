@@ -16,7 +16,6 @@ public class StartLoading : MonoBehaviour
 
     public void Init()
     {
-        Debug.LogError("loading");
         wasCoolDown = true;
         progressBar.value = 0f;
         countSecond = 0;
@@ -92,13 +91,13 @@ public class StartLoading : MonoBehaviour
         var wait = new WaitForSeconds(1f);
         while (true)
         {
-            txtLoading.text = "LOADING .";
+            txtLoading.text = "Loading.";
             yield return wait;
 
-            txtLoading.text = "LOADING ..";
+            txtLoading.text = "Loading..";
             yield return wait;
 
-            txtLoading.text = "LOADING ...";
+            txtLoading.text = "Loading...";
             yield return wait;
 
         }
