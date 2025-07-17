@@ -75,10 +75,7 @@ public class BoxController : MonoBehaviour
         SettingOderLayerPopup();
     }
 
-    /// <summary>
-    /// ?ang có Popup hi?n
-    /// </summary>
-    /// <returns></returns>
+ 
     public bool IsShowingPopup()
     {
         BoxBase[] lst_backObjs = boxStack.ToArray();

@@ -41,7 +41,7 @@ public class WinBox : BoxBase
     public void InitState()
     {
         emojiIcon.sprite = spritesList[UnityEngine.Random.Range(0, spritesList.Count)];
-        nextButton.gameObject.SetActive(false);
+        nextButton.gameObject.SetActive(true);
 
         //GameController.Instance.musicManager.PlayWinSound();
         Invoke("ShowBtnNext", 0.5f);

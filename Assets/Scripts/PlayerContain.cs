@@ -299,7 +299,7 @@ public class PlayerContain : MonoBehaviour
 
     private IEnumerator ShowPopupWin()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
 
         WinBox.Setup().Show();
 

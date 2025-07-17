@@ -53,7 +53,7 @@ public class SettingBox : BoxBase
 
     private void InitState()
     {
-        SetUpBtn();
+        //SetUpBtn();
     }
 
     private void SetUpBtn()
@@ -68,16 +68,16 @@ public class SettingBox : BoxBase
         //    imageVibration.sprite = spriteVibrationOff;
         //    // btnVibration.GetComponent<Image>().sprite = spriteBtnOff;
         //}
-        //if (GameController.Instance.useProfile.OnMusic)
-        //{
-        //    imageMusic.sprite = spriteVMusicOn;
-        //        //btnMusic.GetComponent<Image>().sprite = spriteBtnOn;
-        //}
-        //else
-        //{
-        //    //imageMusic.sprite = spriteVMusicOff;
-        //    //  btnMusic.GetComponent<Image>().sprite = spriteBtnOff;
-        //}
+        if (GameController.Instance.useProfile.OnMusic)
+        {
+            imageMusic.sprite = spriteVMusicOn;
+                //btnMusic.GetComponent<Image>().sprite = spriteBtnOn;
+        }
+        else
+        {
+            //imageMusic.sprite = spriteVMusicOff;
+            //  btnMusic.GetComponent<Image>().sprite = spriteBtnOff;
+        }
         if (GameController.Instance.useProfile.OnSound)
         {
             imageSound.sprite = spriteVSoundOn;
@@ -133,8 +133,8 @@ public class SettingBox : BoxBase
     }
     private void OnClickButtonClose()
     {
+        this.gameObject.SetActive(false);
         //GameController.Instance.musicManager.PlayClickSound();
-        Close();
         //GameController.Instance.admobAds.ShowInterstitial(false, actionIniterClose: () =>
         //{
 

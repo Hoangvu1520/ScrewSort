@@ -20,6 +20,8 @@ public class PileBase : SerializedMonoBehaviour
     public Sprite xIcon;
     public Sprite fullIcon;
     public List<ExtralPlayBase> extrals;
+    public AudioSource audio;
+    public AudioClip audioClipConfeti;
     public ScrewBase[] scewOnArray
     {
         get
