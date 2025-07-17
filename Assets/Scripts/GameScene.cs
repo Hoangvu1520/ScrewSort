@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameScene : SceneBase
 {
@@ -16,7 +17,7 @@ public class GameScene : SceneBase
     public Button btnReload;
     public Button btnAddPile;
     public Button btnBack;
-    public Text tvLevel;
+    public TMP_Text tvLevel;
     public Text tvBtnReturn;
     public Text tvBtnAddPile;
     public Text tvBtnRemoveBoom;
@@ -40,7 +41,11 @@ public class GameScene : SceneBase
     //methods
     public void Init()
     {
-        
+        btnReload.onClick.AddListener(OnClickRetry);
+        btnSetting.onClick.AddListener(delegate { 
+            //GameController.Instance.musicManager.PlayClickSound(); 
+            SettingBox.Setup().Show(); });
+        tvLevel.text = "Level " + "\n" + UserProfile.CurrentLevel;
     }
     public void HandleBtnRemoveAds()
     {
@@ -115,6 +120,11 @@ public class GameScene : SceneBase
     public override void OnEscapeWhenStackBoxEmpty()
     {
 
+    }
+
+    public void OnClickRetry()
+    {
+        SceneManager.LoadScene("Gameplay");
     }
 }
 

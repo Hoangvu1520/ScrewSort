@@ -93,4 +93,42 @@ public abstract class BoxBase : MonoBehaviour
     {
         return true;
     }
+
+    protected virtual void DoClose()
+    {
+        //if (isAnim)
+        //{
+        //    if (mainPanel != null)
+        //    {
+        //        mainPanel.localScale = Vector3.one;
+        //        mainPanel.DOScale(0, 0.5f).SetUpdate(true).SetEase(Ease.InBack).OnComplete(() =>
+        //        {
+
+        //            this.gameObject.SetActive(false);
+        //        });
+        //    }
+        //    else
+        //    {
+
+        //        this.gameObject.SetActive(false);
+        //    }
+        //}
+        //else
+        //{
+
+        this.gameObject.SetActive(false);
+        //}
+
+        if (!isPopup)
+        {
+            if (canvasGroupPanel != null)
+                canvasGroupPanel.blocksRaycasts = true;
+        }
+    }
+    public virtual void Close()
+    {
+        if (!isNotStack)
+            BoxController.Instance.Remove();
+        DoClose();
+    }
 }

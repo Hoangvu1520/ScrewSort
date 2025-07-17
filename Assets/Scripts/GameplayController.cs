@@ -28,6 +28,7 @@ public class GameplayController : Singleton<GameplayController>
     }
     public void Init()
     {
+        gameScene.Init();
         returnController.Init();
         playerContain.Init();
         tutLevel_1.Init();
