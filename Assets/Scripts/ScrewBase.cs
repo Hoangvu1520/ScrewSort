@@ -6,97 +6,35 @@ using System;
 
 public class ScrewBase : MonoBehaviour
 {
-    public int idIndex;
-    public bool inFirstPost = false;
-    public string ROTATE_LEFT = "ScewRotate_Left";
-    public string ROTATE_RIGHT = "ScewRotate_Right";
-    public int id;
-    [SerializeField] private Renderer _renderer;
-
-    [SerializeField] private Material[] lsMaterials;
+    public List<Material> listColor;
+    public bool isCompleted;
     public Animator animation;
-    protected int m_isLockMove;
-    public ParticleSystem vfxScew;
+    public int id;
+    public int ScrewAmount;
+    public Renderer renderer;
     public bool isMoving;
-    public List<ExtralPlayBase> extrals;
+    public bool inFirstPos = false;
 
-    public bool isLockMove
+    public void MoveScrew(Transform targetPost, Action callback)
     {
-        get
-        {
-            return m_isLockMove > 0;
-        }
-        set
-        {
-            if (value)
-                m_isLockMove++;
-            else
-            {
-                m_isLockMove--;
-                if (m_isLockMove < 0)
-                    m_isLockMove = 0;
-            }
+        transform.DOMove(targetPost.position, 0.5f)
+                 .OnComplete(() => callback?.Invoke());
 
-            if (m_isLockMove <= 0)
-            {
-
-
-            }
-        }
-    }
-    private bool iscompleted;
-    public bool IsCompleted
-    {
-        get
-        {
-            return iscompleted;
-        }
-        set
-        {
-            iscompleted = value;
-
-        }
-    }
-    public void Init(int paramId)
-    {
-
-        _renderer.material = lsMaterials[paramId];
-        this.transform.localScale = new Vector3(0, 0, 0);
-        id = paramId;
-        IsCompleted = false;
-
-
+        animation.Play("RotateLeft");
     }
 
-    public void Scale(float time, Action callBack)
-    {
+    public void LocalMoveScrew(Transform targetPost, Action callback)
+{
+    Vector3 targetPos = targetPost.position;
 
-        this.transform.DOScale(new Vector3(1, 1, 1), time).OnComplete(delegate { ShowAnim(ROTATE_LEFT); callBack?.Invoke(); });
-
-    }
-
-    public void MoveScew(Transform parent, float time, Action callBack)
-    {
-        this.transform.parent = parent;
-
-        this.transform.DOLocalMove(Vector3.zero, time).OnComplete(delegate
+    transform.DOMove(targetPos, 0.3f)
+        .OnComplete(() =>
         {
-            callBack?.Invoke();
+            transform.SetParent(targetPost);
+            transform.localPosition = Vector3.zero;
+            callback?.Invoke();
         });
 
-
-    }
-
-    public void LocalMove(float time, Action callBack)
-    {
-        this.transform.DOLocalMove(Vector3.zero, time).OnComplete(delegate
-        {
-            callBack?.Invoke();
-        });
-    }
-    public void ShowAnim(string param)
-    {
-        animation.Play(param);
-    }
+    animation.Play("RotateLeft");
 }
-
+}

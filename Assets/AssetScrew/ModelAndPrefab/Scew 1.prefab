@@ -25,12 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996441055013125631}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4517056730510222146}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8145525101865863419
 MeshFilter:
@@ -51,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -91,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4517056730510222146}
   - component: {fileID: 3274572050948011622}
+  - component: {fileID: 1426536352575045581}
   m_Layer: 0
   m_Name: Scew 1
   m_TagString: Untagged
@@ -105,18 +108,19 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3883263436517882360}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1747282522352747918}
   - {fileID: 1588178859572066632}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3274572050948011622
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -129,10 +133,38 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1426536352575045581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883263436517882360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567698a48d2318d40bc54b67983d567d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listColor:
+  - {fileID: 2100000, guid: 0e0896998dc30e746ad1026915c7fc07, type: 2}
+  - {fileID: 2100000, guid: 8304dfbb761a7d344b3111adea2b2084, type: 2}
+  - {fileID: 2100000, guid: eef0e51c75d073c42aae5b7b89ef2dd9, type: 2}
+  - {fileID: 2100000, guid: 8778d230a3ea30a46a343b0ae290f1ad, type: 2}
+  - {fileID: 2100000, guid: 8273db80c0907c248a558c05afc7ff43, type: 2}
+  - {fileID: 2100000, guid: 11cd213d757764c41a6f4d0503989878, type: 2}
+  - {fileID: 2100000, guid: a328a98cd7f3ed946911bf32af1defb8, type: 2}
+  - {fileID: 2100000, guid: 679ff7a54a2c2f3419958a103fcc7d28, type: 2}
+  - {fileID: 2100000, guid: e817ed4a315c2664895511ac8580b1b4, type: 2}
+  isCompleted: 0
+  animation: {fileID: 3274572050948011622}
+  id: 0
+  ScrewAmount: 0
 --- !u!1 &5105908077501081597
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,12 +190,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5105908077501081597}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4517056730510222146}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4612549582957885079
 MeshFilter:
@@ -184,6 +217,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -192,7 +226,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e47eccb77ba40c945b2605c14b6a95b4, type: 2}
+  - {fileID: 2100000, guid: 6aaaed165fdb78d4fb12de21c7cbe565, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
