@@ -69,26 +69,26 @@ public class SettingBox : BoxBase
         //    imageVibration.sprite = spriteVibrationOff;
         //    // btnVibration.GetComponent<Image>().sprite = spriteBtnOff;
         //}
-        if (GameController.Instance.useProfile.OnMusic)
-        {
-            imageMusic.sprite = spriteVMusicOn;
-            //btnMusic.GetComponent<Image>().sprite = spriteBtnOn;
-        }
-        else
-        {
-            //imageMusic.sprite = spriteVMusicOff;
-            //  btnMusic.GetComponent<Image>().sprite = spriteBtnOff;
-        }
-        if (GameController.Instance.useProfile.OnSound)
-        {
-            imageSound.sprite = spriteVSoundOn;
-            // btnSound.GetComponent<Image>().sprite = spriteBtnOn;
-        }
-        else
-        {
-            imageSound.sprite = spriteVSoundOff;
-            //  btnSound.GetComponent<Image>().sprite = spriteBtnOff;
-        }
+        //if (GameController.Instance.useProfile.OnMusic)
+        //{
+        //    imageMusic.sprite = spriteVMusicOn;
+        //    //btnMusic.GetComponent<Image>().sprite = spriteBtnOn;
+        //}
+        //else
+        //{
+        //    //imageMusic.sprite = spriteVMusicOff;
+        //    //  btnMusic.GetComponent<Image>().sprite = spriteBtnOff;
+        //}
+        //if (GameController.Instance.useProfile.OnSound)
+        //{
+        //    imageSound.sprite = spriteVSoundOn;
+        //    // btnSound.GetComponent<Image>().sprite = spriteBtnOn;
+        //}
+        //else
+        //{
+        //    imageSound.sprite = spriteVSoundOff;
+        //    //  btnSound.GetComponent<Image>().sprite = spriteBtnOff;
+        //}
         imageVibration.SetNativeSize();
         imageMusic.SetNativeSize();
         imageSound.SetNativeSize();

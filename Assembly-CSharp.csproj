@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\GameManager\GameManager.cs" />
     <Compile Include="Assets\Scripts\UI\BoxController.cs" />
     <Compile Include="Assets\Scripts\PileBase.cs" />
+    <Compile Include="Assets\Scripts\Utility\StringHelper.cs" />
     <Compile Include="Assets\Scripts\GameManager\SoundManager.cs" />
     <Compile Include="Assets\Scripts\GameManager\UserProfile.cs" />
     <Compile Include="Assets\Scripts\UI\Loading\Fader.cs" />
