@@ -72,7 +72,7 @@ public class PlayerContain : MonoBehaviour
     public int sumScrewCurrent;
     public int sumScrewInit;
     public bool allScrewInitDone;
-
+    bool checkWin;
     public PossitionType GetPossitionType(int param)
     {
         foreach (var item in lsPossitionType)
@@ -106,10 +106,6 @@ public class PlayerContain : MonoBehaviour
             if (item != null)
             {
                 lsPostPileHolds.Add(item);
-            }
-            else
-            {
-                Debug.LogError("null");
             }
         }
 
@@ -153,5 +149,32 @@ public class PlayerContain : MonoBehaviour
             allScrewInitDone = false;
         }
           
+    }
+
+    public void HandleCheckWin()
+    {
+        checkWin = true;
+
+        foreach (var item in currentPileInGame)
+        {
+            if (!item.GetScrewComplete)
+            {
+                checkWin = false;
+            }
+
+        }
+
+        if (checkWin)
+        {
+            StartCoroutine(ShowPopupWin());
+
+        }
+    }
+    private IEnumerator ShowPopupWin()
+    {
+        yield return new WaitForSeconds(1);
+
+        WinBox.Setup().Show();
+
     }
 }

@@ -9,6 +9,7 @@ public class StringHelper : MonoBehaviour
     public const string ONOFF_MUSIC = "ONOFF_MUSIC";
     public const string ONOFF_VIBRATION = "ONOFF_VIBRATION";
     public const string PATH_CONFIG_LEVEL = "LevelTest/Level{0}";
+    public const string CURRENT_LEVEL = "CURRENT_LEVEL";
 }
 
 public class SceneName

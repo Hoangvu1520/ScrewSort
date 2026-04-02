@@ -21,11 +21,11 @@ public class UserProfile : MonoBehaviour
     {
         get
         {
-            return PlayerPrefs.GetInt("", 1);
+            return PlayerPrefs.GetInt(StringHelper.CURRENT_LEVEL, 1);
         }
         set
         {
-            PlayerPrefs.SetInt("", value);
+            PlayerPrefs.SetInt(StringHelper.CURRENT_LEVEL, value);
             PlayerPrefs.Save();
         }
     }

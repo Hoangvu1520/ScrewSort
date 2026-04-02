@@ -22,6 +22,20 @@ public class PileBase : SerializedMonoBehaviour
             return screwList.ToArray();
         }
     }
+    public bool GetScrewComplete
+    {
+        get
+        {
+            for (int i = 0; i < screwList.Count; i++)
+            {
+                if (screwList[i].IsCompleted == false)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
     public bool IsCompleted
     {
         get
