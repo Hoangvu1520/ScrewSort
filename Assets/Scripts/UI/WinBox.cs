@@ -87,11 +87,7 @@ public class WinBox : BoxBase
         SceneManager.LoadScene("Gameplay");
         void Next()
         {
-            //    GameController.Instance.AnalyticsController.WinLevel(UseProfile.CurrentLevel);
-            //    GameController.Instance.admobAds.HandleHideMerec();
-            //    MMVibrationManager.Haptic(HapticTypes.Selection, false, true, this);
-            //    GameController.Instance.musicManager.PlayClickSound();
-            //GamePlayController.Instance.tutLevel_1.EndTut();
+            
             if (UserProfile.CurrentLevel >= 100)
             {
                 Debug.LogError("next");

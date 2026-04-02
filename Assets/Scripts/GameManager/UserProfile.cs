@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class UserProfile : MonoBehaviour
 {
-    
-    
-    
-        
-    
     public static bool FirstLoading
     {
         get
