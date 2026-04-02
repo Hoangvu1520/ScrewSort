@@ -9,20 +9,24 @@ public class InputController : MonoBehaviour
     public PileBase currentPile;
     public PileBase targetPile;
     public float cooldown;
+    public bool wasTouchPile;
 
     // Update is called once per frame
     void Update()
     {
-
+#if UNITY_STANDALONE
         if (Input.GetMouseButton(0))
         {
             DetectObject(Input.mousePosition);
         }
+#endif
         //android and ios
+#if UNITY_ANDROID || UNITY_IOS
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
             DetectObject(Input.touches[0].position);
         }
+#endif
     }
     private IEnumerator HandleChangeStackScrew(PileBase pile, PileBase targetPile,
     Action onComplete)
@@ -37,11 +41,15 @@ public class InputController : MonoBehaviour
         if (targetPile.screwList.Count > 0 &&
             pile.screwList[top].id != targetPile.firstScrew.id)
             yield break;
+        if (targetPile.screwPostList == null || bottom >= targetPile.screwPostList.Count)
+        {
+            yield break;
+        }
 
-        int movingId = pile.screwList[top].id;
+        int movingId = pile.firstScrew.id;
 
         while (top >= 0 &&
-               bottom < targetPile.slotNum &&
+               bottom < targetPile.screwPostList.Count &&
                pile.screwList[top].id == movingId)
         {
             // Store reference before modifying list
@@ -50,18 +58,11 @@ public class InputController : MonoBehaviour
             bool finished = false;
 
             // Step 1: Lift
-            if (!movingScrew.inFirstPos)
-            {
-                movingScrew.LocalMoveScrew(pile.firstPost, () => finished = true);
-                yield return new WaitUntil(() => finished);
 
-                finished = false;
-            }
-            else
-            {
-                yield return null;
-            }
+            movingScrew.LocalMoveScrew(pile.firstPost, () => finished = true);
+            yield return new WaitUntil(() => finished);
 
+            finished = false;
 
             // Step 2: Move above target
             movingScrew.LocalMoveScrew(targetPile.firstPost, () => finished = true);
@@ -97,14 +98,26 @@ public class InputController : MonoBehaviour
                 currentPile = pile;
                 pile.firstScrew.MoveScrew(currentPile.firstPost, delegate { currentPile.firstScrew.inFirstPos = true; });
             }
-            else if (currentPile != null && pile != null
-         && currentPile != pile
-         && currentPile.firstScrew.id == pile.firstScrew.id)
+            else if (currentPile != null && pile != null && currentPile != pile)
             {
-
-                // currentPile.firstScrew.MoveScrew(currentPile.firstScrewPos, delegate { });
-                // currentPile = pile;
-                StartCoroutine(HandleChangeStackScrew(currentPile, pile, () => { currentPile = null; }));
+                // Case 1: target pile is empty
+                if (pile.screwList.Count == 0)
+                {
+                    StartCoroutine(HandleChangeStackScrew(currentPile, pile, () =>
+                    {
+                        currentPile = null;
+                    }));
+                }
+                // Case 2: same color
+                else if (currentPile.firstScrew != null &&
+                         pile.firstScrew != null &&
+                         currentPile.firstScrew.id == pile.firstScrew.id)
+                {
+                    StartCoroutine(HandleChangeStackScrew(currentPile, pile, () =>
+                    {
+                        currentPile = null;
+                    }));
+                }
             }
             else if (currentPile != null && pile != null && currentPile.firstScrew.id != pile.firstScrew.id)
             {

@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 8101867285904656581}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -97.577, y: 132.12, z: -305.392}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -165,9 +165,10 @@ MonoBehaviour:
   animation: {fileID: 8146549961843081283}
   id: 0
   ScrewAmount: 0
-  renderer: {fileID: 0}
+  renderer: {fileID: 4882995326331409370}
   isMoving: 0
   inFirstPos: 0
+  _renderer: {fileID: 4882995326331409370}
 --- !u!1 &8175910378713443174
 GameObject:
   m_ObjectHideFlags: 0

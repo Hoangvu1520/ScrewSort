@@ -14,6 +14,32 @@ public class ScrewBase : MonoBehaviour
     public Renderer renderer;
     public bool isMoving;
     public bool inFirstPos = false;
+    [SerializeField] private Renderer _renderer;
+ 
+    private  bool iscompleted;
+    public bool IsCompleted
+    {
+        get
+        {
+            return iscompleted;
+        }
+        set
+        {
+            iscompleted = value;
+           
+        }
+    }
+
+    public void Init(int paramId)
+    {
+
+        _renderer.material = listColor[paramId];
+        this.transform.localScale = new Vector3(0, 0, 0);
+        id = paramId;
+        IsCompleted = false;
+        
+
+    }
 
     public void MoveScrew(Transform targetPost, Action callback)
     {
@@ -21,6 +47,13 @@ public class ScrewBase : MonoBehaviour
                  .OnComplete(() => callback?.Invoke());
 
         animation.Play("RotateLeft");
+    }
+
+    public void Scale(float time, Action callBack)
+    {
+   
+        this.transform.DOScale(new Vector3(1, 1, 1), time).OnComplete(delegate { animation.Play("RotateLeft"); callBack?.Invoke(); });
+
     }
 
     public void LocalMoveScrew(Transform targetPost, Action callback)

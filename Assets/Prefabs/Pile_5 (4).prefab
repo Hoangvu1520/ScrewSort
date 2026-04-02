@@ -515,7 +515,7 @@ Transform:
   m_GameObject: {fileID: 6395284533809834834}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -100.06, y: 132, z: -301.77}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -677,10 +677,10 @@ MonoBehaviour:
   - {fileID: 5535472110943354548}
   - {fileID: 3663004078664395709}
   - {fileID: 7641689575447242257}
-  isCompleted: 0
   id: 0
   firstPost: {fileID: 3660955261571226910}
   slotNum: 4
+  audioClip: {fileID: 0}
 --- !u!1 &6625812242480779399
 GameObject:
   m_ObjectHideFlags: 0
