@@ -10,10 +10,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{88871514-985D-AA0F-DDEB-76812B87271E}</ProjectGuid>
+    <ProjectGuid>{D9A1545C-8ABF-EE8C-5D42-5D91455C8E6F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Unity.VisualScripting.SettingsProvider.Editor</AssemblyName>
+    <AssemblyName>Unity.PlasticSCM.Editor.Entities</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -60,19 +60,11 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.62f3\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\SettingsProvider\ProjectSettingsProvider.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\SettingsProvider\ProjectSettings\BackupSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\SettingsProvider\ProjectSettings\LinkerPropertyProviderSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\SettingsProvider\ProjectSettings\CustomPropertyProviderSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\SettingsProvider\ProjectSettingsProviderView.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\SettingsProvider\EditorPreferencesProvider.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\SettingsProvider\ProjectSettings\AssemblyOptionsSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\SettingsProvider\ProjectSettings\TypeOptionsSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\SettingsProvider\EditorPreferencesProviderView.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\SettingsProvider\ProjectSettings\ScriptReferenceResolverSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.2\Editor\Entities\HierarchyExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.2\Editor\Entities\GetSubScenePathFromInstance.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\SettingsProvider\Unity.VisualScripting.SettingsProvider.Editor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.11.2\Editor\Entities\Unity.PlasticSCM.Editor.Entities.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1025,25 +1017,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{225E38F0-5554-CA76-DC3B-0E9BEC569919}</Project>
-      <Name>Unity.VisualScripting.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
-      <Project>{A6058E5E-7CA8-C662-32C4-460672C50D62}</Project>
-      <Name>Unity.VisualScripting.Core.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
-      <Project>{3DB8596B-B330-CD63-7E92-CD9F8C52819D}</Project>
-      <Name>Unity.VisualScripting.Flow</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
-      <Project>{2EB4F730-01BF-BA7D-2689-F90F079AA101}</Project>
-      <Name>Unity.VisualScripting.Flow.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.csproj">
-      <Project>{22DEE59A-3F1F-1EBD-C974-41DD32DA9A69}</Project>
-      <Name>Unity.VisualScripting.State</Name>
+    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
+      <Project>{DDDB9420-9B17-6B2F-6585-FD2B3DE9445C}</Project>
+      <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{A95847CA-B307-1B97-1DAD-CC0F92D23263}</Project>
