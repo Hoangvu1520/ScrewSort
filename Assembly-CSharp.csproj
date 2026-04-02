@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\LevelData\LevelConfig.cs" />
     <Compile Include="Assets\DOTween_1_2_765\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\Scripts\UI\Loading\StartLoading.cs" />
+    <Compile Include="Assets\Scripts\UI\GameController.cs" />
     <Compile Include="Assets\Scripts\UI\BoxBase.cs" />
     <Compile Include="Assets\DOTween_1_2_765\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
     <Compile Include="Assets\Scripts\UI\WinBox.cs" />
