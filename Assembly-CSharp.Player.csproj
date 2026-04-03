@@ -86,8 +86,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
-    <Compile Include="Assets\Scripts\GameManager\ReturnController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\Scripts\GameManager\ReturnController.cs" />
     <Compile Include="Assets\Scripts\ScrewBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
@@ -123,8 +123,8 @@
     <Compile Include="Assets\DOTween_1_2_765\DOTween\Modules\DOTweenModuleSprite.cs" />
     <Compile Include="Assets\Scripts\GameManager\Singleton.cs" />
     <Compile Include="Assets\DOTween_1_2_765\DOTween\Modules\DOTweenModuleAudio.cs" />
-    <Compile Include="Assets\DOTween_1_2_765\DOTween\Modules\DOTweenModulePhysics2D.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\DOTween_1_2_765\DOTween\Modules\DOTweenModulePhysics2D.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
