@@ -147,6 +147,7 @@ public IEnumerator Init(List<int> idScrew)
 
     }
 
+
     public void PopFirstScrewSameColor()
     {
         int lastIndex = screwList.Count - 1;
