@@ -3,12 +3,14 @@ using Sirenix.Utilities;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class PileBase : SerializedMonoBehaviour
 {
     //attributes
     [SerializeField] public List<ScrewBase> screwList;
     public List<Transform> screwPostList;
+    public PileData pileData;
     private bool isComPleted;
     public int id;
     public Transform firstPost;
@@ -83,9 +85,37 @@ public class PileBase : SerializedMonoBehaviour
             return screwPostList[screwList.Count - 1];
         }
     }
+    public bool GetPileSuccess
+    {
+        get
+        {
+            
+            for (int i = 0; i < screwList.Count; i++)
+            {
+                if (screwList[i].id != firstScrew.id)
+                {
+                    return false;
+                }
+            }
+
+            if (screwList.Count >= pileData.numSlot)
+            {
+                for (int i = 0; i < screwList.Count; i++)
+                {
+                    screwList[i].IsCompleted = true;
+                }
+                //vfxConfetti.Play();
+                //audio.PlayOneShot(audioClipConfeti);
+                //MMVibrationManager.Haptic(HapticTypes.Selection, false, true, this);
+                return true;
+            }
+
+            return false;
+        }
+    }
 
 
-public IEnumerator Init(List<int> idScrew)
+    public IEnumerator Init(List<int> idScrew)
     {
         screwList = new List<ScrewBase>();
         yield return new WaitForSeconds(1);
