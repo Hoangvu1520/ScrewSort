@@ -24,7 +24,7 @@ public class WinBox : BoxBase
     {
         if (instance == null)
         {
-            instance = Instantiate(Resources.Load<WinBox>(""));
+            instance = Instantiate(Resources.Load<WinBox>("Winbox"));
             instance.Init();
         }
 

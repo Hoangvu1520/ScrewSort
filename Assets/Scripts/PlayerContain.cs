@@ -153,23 +153,16 @@ public class PlayerContain : MonoBehaviour
 
     public void HandleCheckWin()
     {
-        checkWin = true;
-
-        foreach (var item in currentPileInGame)
+        foreach (var pile in currentPileInGame)
         {
-            if (!item.GetScrewComplete)
+            if (!pile.GetPileSuccess)
             {
-                checkWin = false;
+                return; // not win yet
             }
-
         }
 
-        if (checkWin)
-        {
-            Debug.LogError("win");
-            StartCoroutine(ShowPopupWin());
-
-        }
+        // All piles success
+        StartCoroutine(ShowPopupWin());
     }
     private IEnumerator ShowPopupWin()
     {
