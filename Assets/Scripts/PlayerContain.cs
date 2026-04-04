@@ -166,6 +166,7 @@ public class PlayerContain : MonoBehaviour
 
         if (checkWin)
         {
+            Debug.LogError("win");
             StartCoroutine(ShowPopupWin());
 
         }

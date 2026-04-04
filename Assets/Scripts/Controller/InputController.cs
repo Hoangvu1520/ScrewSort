@@ -82,6 +82,7 @@ public class InputController : MonoBehaviour
             bottom++;
         }
         onComplete?.Invoke();
+        GamePlayController.Instance.playerContain.HandleCheckWin();
     }
 
     private void DetectObject(Vector3 screenPosition)
