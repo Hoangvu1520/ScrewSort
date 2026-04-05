@@ -101,23 +101,42 @@ public class InputController : MonoBehaviour
             }
             else if (currentPile != null && pile != null && currentPile != pile)
             {
-                // Case 1: target pile is empty
-                if (pile.screwList.Count == 0)
+                
+                if (pile.screwList.Count == 0 ||
+                    (currentPile.firstScrew != null &&
+                     pile.firstScrew != null &&
+                     currentPile.firstScrew.id == pile.firstScrew.id))
                 {
                     StartCoroutine(HandleChangeStackScrew(currentPile, pile, () =>
                     {
                         currentPile = null;
                     }));
                 }
-                // Case 2: same color
-                else if (currentPile.firstScrew != null &&
-                         pile.firstScrew != null &&
-                         currentPile.firstScrew.id == pile.firstScrew.id)
+                else
                 {
-                    StartCoroutine(HandleChangeStackScrew(currentPile, pile, () =>
+
+                    
+                    if (currentPile.firstScrew != null)
                     {
-                        currentPile = null;
-                    }));
+                        var oldPile = currentPile;
+
+                        currentPile.firstScrew.MoveScrew(
+                            oldPile.firstScrewPos,
+                            () => oldPile.firstScrew.inFirstPos = false
+                        );
+                    }
+
+                    
+                    currentPile = pile;
+
+                    
+                    if (currentPile.firstScrew != null)
+                    {
+                        currentPile.firstScrew.MoveScrew(
+                            currentPile.firstPost,
+                            () => currentPile.firstScrew.inFirstPos = true
+                        );
+                    }
                 }
             }
             else if (currentPile != null && pile != null && currentPile.firstScrew.id != pile.firstScrew.id)
