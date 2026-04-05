@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6374eb25f1784cb4af643540ffddcfd, type: 3}
   m_Name: New Level Config
   m_EditorClassIdentifier: 
-  levelNumber: 1
+  levelNumber: 2
   data:
     standConfig:
     - idBirds: 0000000000000000
