@@ -95,7 +95,7 @@ public class PlayerContain : MonoBehaviour
 
     private void SpawnLevel()
     {
-        string path = Application.dataPath + "/Scripts/LevelData/LevelData.json";
+        string path = Application.dataPath + $"/Scripts/LevelData/LevelData4.json";
         string json = System.IO.File.ReadAllText(path);
         levelStandConfig = JsonUtility.FromJson<LevelStandConfig>(json);
 
