@@ -72,7 +72,7 @@ public class PlayerContain : MonoBehaviour
     public int sumScrewCurrent;
     public int sumScrewInit;
     public bool allScrewInitDone;
-    bool checkWin;
+    public PileBase currentPile;
     public PossitionType GetPossitionType(int param)
     {
         foreach (var item in lsPossitionType)
