@@ -569,7 +569,7 @@ MonoBehaviour:
   isBoxSave: 0
   nextButton: {fileID: 6402703478408751790}
   aura: {fileID: 0}
-  emojiIcon: {fileID: 0}
+  emojiIcon: {fileID: 323527814488724380}
   spritesList: []
   contentList:
   - Congratulation
