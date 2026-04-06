@@ -35,11 +35,6 @@ public class GameController : MonoBehaviour
 
     public void SetUp()
     {
-
-        //admobAds.Init();
-        //musicManager.Init();
-        //iapController.Init();
-        //MMVibrationManager.SetHapticsActive(useProfile.OnVibration);
         startLoading.Init();
     }
 
