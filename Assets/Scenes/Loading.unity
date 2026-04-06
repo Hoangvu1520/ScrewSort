@@ -391,8 +391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a504408d8884c57ac973fda8782b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txtLoading: {fileID: 0}
-  progressBar: {fileID: 0}
+  txtLoading: {fileID: 1358134095}
+  progressBar: {fileID: 826955864}
   countSecond: 0
   wasCoolDown: 0
 --- !u!1 &826955862
@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useProfile: {fileID: 1440923711}
-  startLoading: {fileID: 0}
+  startLoading: {fileID: 549783050}
 --- !u!1 &1635410438
 GameObject:
   m_ObjectHideFlags: 0
