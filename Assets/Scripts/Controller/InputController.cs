@@ -52,29 +52,29 @@ public class InputController : MonoBehaviour
                bottom < targetPile.screwPostList.Count &&
                pile.screwList[top].id == movingId)
         {
-            // Store reference before modifying list
+            
             ScrewBase movingScrew = pile.screwList[top];
-
+            movingScrew.animation.Play("RotateLeft");
             bool finished = false;
 
-            // Step 1: Lift
+            
 
             movingScrew.LocalMoveScrew(pile.firstPost, () => finished = true);
             yield return new WaitUntil(() => finished);
 
             finished = false;
 
-            // Step 2: Move above target
+            
             movingScrew.LocalMoveScrew(targetPile.firstPost, () => finished = true);
             yield return new WaitUntil(() => finished);
 
             finished = false;
 
-            // Step 3: Drop to slot
+            
             movingScrew.LocalMoveScrew(targetPile.screwPostList[bottom], () => finished = true);
             yield return new WaitUntil(() => finished);
 
-            // Update lists after animation completes
+            
             pile.screwList.RemoveAt(top);
             targetPile.screwList.Add(movingScrew);
 
