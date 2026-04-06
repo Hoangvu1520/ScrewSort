@@ -4374,6 +4374,8 @@ MonoBehaviour:
   screwBase: {fileID: 5414830287202688654, guid: dddbc4202fd1243d0bd5bc0f682eb876, type: 3}
   currentPileList:
   - {fileID: 1848028694068464069, guid: da36a31c12d884f9aa58c4caa05aa6b5, type: 3}
+  - {fileID: 904254817767225993, guid: bfa0d8ea5b722fe46aa2fd9262b5cc38, type: 3}
+  - {fileID: 4348726101293398525, guid: e75a8721f424ffe4784bd83af62e134c, type: 3}
   lsPostPileHolds: []
   lsPossitionType:
   - sumPile: 2
@@ -4491,6 +4493,8 @@ MonoBehaviour:
     - {fileID: 750100387}
   lsPileHolds:
   - {fileID: 1848028694068464069, guid: da36a31c12d884f9aa58c4caa05aa6b5, type: 3}
+  - {fileID: 904254817767225993, guid: bfa0d8ea5b722fe46aa2fd9262b5cc38, type: 3}
+  - {fileID: 4348726101293398525, guid: e75a8721f424ffe4784bd83af62e134c, type: 3}
   levelData:
     levelIndex: 0
     screwID: 

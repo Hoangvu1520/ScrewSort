@@ -53,6 +53,14 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5985658887927202676, guid: 25535a029f4d86e4bb0bdfade885a828, type: 3}
+      propertyPath: pileData.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985658887927202676, guid: 25535a029f4d86e4bb0bdfade885a828, type: 3}
+      propertyPath: pileData.numSlot
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985658887927202676, guid: 25535a029f4d86e4bb0bdfade885a828, type: 3}
       propertyPath: screwPostList.Array.size
       value: 5
       objectReference: {fileID: 0}
