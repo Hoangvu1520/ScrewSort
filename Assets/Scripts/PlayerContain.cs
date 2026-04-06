@@ -95,11 +95,9 @@ public class PlayerContain : MonoBehaviour
 
     private void SpawnLevel()
     {
-        string path = Application.dataPath + $"/Scripts/LevelData/LevelData4.json";
+        string path = Application.dataPath + $"/Scripts/LevelData/LevelData{UserProfile.CurrentLevel}.json";
         string json = System.IO.File.ReadAllText(path);
         levelStandConfig = JsonUtility.FromJson<LevelStandConfig>(json);
-
-        // levelStandConfig = JsonUtility.FromJson<LevelStandConfig>(lvJson.text);
         lsPostPileHolds = new List<Transform>();
         foreach (var item in GetPossitionType(levelStandConfig.standConfig.Count).lisPostPile)
         {
