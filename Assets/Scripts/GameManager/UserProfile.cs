@@ -1,23 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.UIElements;
 
 public class UserProfile : MonoBehaviour
 {
-    
-    
-    
-        
-    
     public static bool FirstLoading
     {
         get
         {
-            return PlayerPrefs.GetInt("", 0) == 1;
+            return PlayerPrefs.GetInt(StringHelper.LOADING_COMPLETE, 0) == 1;
         }
         set
         {
-            PlayerPrefs.SetInt("", value ? 1 : 0);
+            PlayerPrefs.SetInt(StringHelper.LOADING_COMPLETE, value ? 1 : 0);
             PlayerPrefs.Save();
         }
     }
@@ -26,28 +24,15 @@ public class UserProfile : MonoBehaviour
     {
         get
         {
-            return PlayerPrefs.GetInt("", 1);
+            return PlayerPrefs.GetInt(StringHelper.CURRENT_LEVEL, 1);
         }
         set
         {
-            PlayerPrefs.SetInt("", value);
+            PlayerPrefs.SetInt(StringHelper.CURRENT_LEVEL, value);
             PlayerPrefs.Save();
         }
     }
     
- 
-    // public string ListSave
-    // {
-    //     get
-    //     {
-    //         return PlayerPrefs.GetString(GameData.LEVEL_SAVE);
-    //     }
-    //     set
-    //     {
-    //         PlayerPrefs.SetString(GameData.LEVEL_SAVE, value);
-    //         PlayerPrefs.Save();
-    //     }
-    // }
 
 
 }

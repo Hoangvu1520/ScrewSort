@@ -72,7 +72,7 @@ public class PlayerContain : MonoBehaviour
     public int sumScrewCurrent;
     public int sumScrewInit;
     public bool allScrewInitDone;
-
+    public PileBase currentPile;
     public PossitionType GetPossitionType(int param)
     {
         foreach (var item in lsPossitionType)
@@ -95,21 +95,15 @@ public class PlayerContain : MonoBehaviour
 
     private void SpawnLevel()
     {
-        string path = Application.dataPath + "/Scripts/LevelData/LevelData.json";
+        string path = Application.dataPath + $"/Scripts/LevelData/LevelData{UserProfile.CurrentLevel}.json";
         string json = System.IO.File.ReadAllText(path);
         levelStandConfig = JsonUtility.FromJson<LevelStandConfig>(json);
-
-        // levelStandConfig = JsonUtility.FromJson<LevelStandConfig>(lvJson.text);
         lsPostPileHolds = new List<Transform>();
         foreach (var item in GetPossitionType(levelStandConfig.standConfig.Count).lisPostPile)
         {
             if (item != null)
             {
                 lsPostPileHolds.Add(item);
-            }
-            else
-            {
-                Debug.LogError("null");
             }
         }
 
@@ -153,5 +147,39 @@ public class PlayerContain : MonoBehaviour
             allScrewInitDone = false;
         }
           
+    }
+
+    public void HandleCheckWin()
+    {
+
+        foreach (var pile in currentPileInGame)
+        {
+            // skip empty piles
+            if (pile.screwList.Count == 0)
+                continue;
+
+            // must be full
+            if (pile.screwList.Count != pile.slotNum)
+                return;
+
+            // must be same color
+            int id = pile.firstScrew.id;
+
+            foreach (var screw in pile.screwList)
+            {
+                if (screw.id != id)
+                    return;
+            }
+        }
+
+        // All piles success
+        StartCoroutine(ShowPopupWin());
+    }
+    private IEnumerator ShowPopupWin()
+    {
+        yield return new WaitForSeconds(1);
+
+        WinBox.Setup().Show();
+
     }
 }

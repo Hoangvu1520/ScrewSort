@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6374eb25f1784cb4af643540ffddcfd, type: 3}
   m_Name: New Level Config
   m_EditorClassIdentifier: 
-  levelNumber: 1
+  levelNumber: 7
   data:
     standConfig:
     - idBirds: 0000000000000000
@@ -25,9 +25,21 @@ MonoBehaviour:
         type: 0
         numSlot: 4
       side: -1
-  json: "{\n    \"standConfig\": [\n        {\n            \"idBirds\": [\n               
-    0,\n                0\n            ],\n            \"standData\": {\n               
-    \"type\": 0,\n                \"numSlot\": 4\n            },\n            \"side\":
-    -1\n        },\n        {\n            \"idBirds\": [\n                0,\n               
-    0\n            ],\n            \"standData\": {\n                \"type\": 0,\n               
-    \"numSlot\": 4\n            },\n            \"side\": -1\n        }\n    ]\n}"
+  json: "{\r\n  \"standConfig\": [\r\n    {\r\n      \"idBirds\": [\r\n        1,\r\n       
+    5,\r\n        0,\r\n        3\r\n      ],\r\n      \"standData\": {\r\n       
+    \"type\": 0,\r\n        \"numSlot\": 4\r\n      },\r\n      \"side\": -1\r\n   
+    },\r\n    {\r\n      \"idBirds\": [\r\n        0,\r\n        4,\r\n        1,\r\n       
+    1\r\n      ],\r\n      \"standData\": {\r\n        \"type\": 0,\r\n        \"numSlot\":
+    4\r\n      },\r\n      \"side\": 1\r\n    },\r\n    {\r\n      \"idBirds\": [\r\n       
+    0,\r\n        5,\r\n        4,\r\n        5\r\n      ],\r\n      \"standData\":
+    {\r\n        \"type\": 0,\r\n        \"numSlot\": 4\r\n      },\r\n      \"side\":
+    -1\r\n    },\r\n    {\r\n      \"idBirds\": [\r\n        3,\r\n        4,\r\n       
+    3,\r\n        1\r\n      ],\r\n      \"standData\": {\r\n        \"type\": 0,\r\n       
+    \"numSlot\": 4\r\n      },\r\n      \"side\": 1\r\n    },\r\n    {\r\n      \"idBirds\":
+    [\r\n        5,\r\n        3,\r\n        4,\r\n        0\r\n      ],\r\n     
+    \"standData\": {\r\n        \"type\": 0,\r\n        \"numSlot\": 4\r\n      },\r\n     
+    \"side\": -1\r\n    },\r\n    {\r\n      \"idBirds\": [],\r\n      \"standData\":
+    {\r\n        \"type\": 0,\r\n        \"numSlot\": 4\r\n      },\r\n      \"side\":
+    1\r\n    },\r\n    {\r\n      \"idBirds\": [],\r\n      \"standData\": {\r\n       
+    \"type\": 0,\r\n        \"numSlot\": 4\r\n      },\r\n      \"side\": -1\r\n   
+    }\r\n  ]\r\n}"

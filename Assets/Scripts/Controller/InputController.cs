@@ -52,29 +52,29 @@ public class InputController : MonoBehaviour
                bottom < targetPile.screwPostList.Count &&
                pile.screwList[top].id == movingId)
         {
-            // Store reference before modifying list
+            
             ScrewBase movingScrew = pile.screwList[top];
-
+            movingScrew.animation.Play("RotateLeft");
             bool finished = false;
 
-            // Step 1: Lift
+            
 
             movingScrew.LocalMoveScrew(pile.firstPost, () => finished = true);
             yield return new WaitUntil(() => finished);
 
             finished = false;
 
-            // Step 2: Move above target
+            
             movingScrew.LocalMoveScrew(targetPile.firstPost, () => finished = true);
             yield return new WaitUntil(() => finished);
 
             finished = false;
 
-            // Step 3: Drop to slot
+            
             movingScrew.LocalMoveScrew(targetPile.screwPostList[bottom], () => finished = true);
             yield return new WaitUntil(() => finished);
 
-            // Update lists after animation completes
+            
             pile.screwList.RemoveAt(top);
             targetPile.screwList.Add(movingScrew);
 
@@ -82,6 +82,7 @@ public class InputController : MonoBehaviour
             bottom++;
         }
         onComplete?.Invoke();
+        GamePlayController.Instance.playerContain.HandleCheckWin();
     }
 
     private void DetectObject(Vector3 screenPosition)
@@ -100,23 +101,42 @@ public class InputController : MonoBehaviour
             }
             else if (currentPile != null && pile != null && currentPile != pile)
             {
-                // Case 1: target pile is empty
-                if (pile.screwList.Count == 0)
+                
+                if (pile.screwList.Count == 0 ||
+                    (currentPile.firstScrew != null &&
+                     pile.firstScrew != null &&
+                     currentPile.firstScrew.id == pile.firstScrew.id))
                 {
                     StartCoroutine(HandleChangeStackScrew(currentPile, pile, () =>
                     {
                         currentPile = null;
                     }));
                 }
-                // Case 2: same color
-                else if (currentPile.firstScrew != null &&
-                         pile.firstScrew != null &&
-                         currentPile.firstScrew.id == pile.firstScrew.id)
+                else
                 {
-                    StartCoroutine(HandleChangeStackScrew(currentPile, pile, () =>
+
+                    
+                    if (currentPile.firstScrew != null)
                     {
-                        currentPile = null;
-                    }));
+                        var oldPile = currentPile;
+
+                        currentPile.firstScrew.MoveScrew(
+                            oldPile.firstScrewPos,
+                            () => oldPile.firstScrew.inFirstPos = false
+                        );
+                    }
+
+                    
+                    currentPile = pile;
+
+                    
+                    if (currentPile.firstScrew != null)
+                    {
+                        currentPile.firstScrew.MoveScrew(
+                            currentPile.firstPost,
+                            () => currentPile.firstScrew.inFirstPos = true
+                        );
+                    }
                 }
             }
             else if (currentPile != null && pile != null && currentPile.firstScrew.id != pile.firstScrew.id)

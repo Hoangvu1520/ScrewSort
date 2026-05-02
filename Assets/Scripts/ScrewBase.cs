@@ -32,13 +32,10 @@ public class ScrewBase : MonoBehaviour
 
     public void Init(int paramId)
     {
-
         _renderer.material = listColor[paramId];
         this.transform.localScale = new Vector3(0, 0, 0);
         id = paramId;
         IsCompleted = false;
-        
-
     }
 
     public void MoveScrew(Transform targetPost, Action callback)

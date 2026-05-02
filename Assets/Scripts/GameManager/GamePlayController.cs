@@ -22,12 +22,7 @@ public class GamePlayController : Singleton<GamePlayController>
     }
     void Init()
     {
-        if (playerContain == null)
-        {
-            Debug.LogError("GamePlayController: playerContain reference is missing.");
-            return;
-        }
-
         playerContain.Init();
+        gameScene.Init();
     }
 }
